@@ -1,0 +1,84 @@
+@import "normalize";
+@import "variables";
+
+// Typography
+// ===================================
+
+h1,h2,h3{
+    text-transform: uppercase;
+}
+
+// Layout
+// ===================================
+
+body{
+    background-color: $bodyBG;
+}
+
+.wrap{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+    header,
+    main,
+    footer{
+        
+        >div{
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+
+            /* Desktops and laptops ----------- */
+            @media only screen  and (min-width : 1224px) {
+                max-width: 1224px;
+            }
+
+            /* Large screens ----------- */
+            @media only screen  and (min-width : 1824px) {
+                max-width: 1824px;
+            }  
+            
+        }
+        
+    }
+    
+    header{
+       background-color: $headerBG; 
+    }
+    
+    main{
+        flex-grow: 1;
+        background-color: $mainBG; 
+    }
+    
+    footer{
+        background-color: $footerBG; 
+    }
+    
+    
+}
+
+// Media Quaries
+// ===================================
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
