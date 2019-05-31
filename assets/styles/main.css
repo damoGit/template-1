@@ -338,23 +338,23 @@ template {
   display: none; }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
-/* line 5, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 8, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 html {
   box-sizing: border-box; }
 
-/* line 9, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 12, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit; }
 
-/* line 18, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 21, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5; }
 
-/* line 24, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 27, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 h1,
 h2,
 h3 {
@@ -362,26 +362,26 @@ h3 {
   font-weight: 400;
   text-transform: uppercase; }
 
-/* line 34, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 37, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 main h1,
 main h2,
 main h3 {
   color: black; }
 
-/* line 40, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-main hr {
-  max-width: 300px;
+/* line 45, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+hr {
+  width: 50%;
   border: solid 1px #d32123;
   border-left: none;
   border-right: none;
   border-bottom: none; }
 
-/* line 53, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 56, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 .wrap {
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
-  /* line 62, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
   .wrap header > div,
   .wrap main > div,
   .wrap footer > div {
@@ -389,101 +389,117 @@ main hr {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    /* Medium Devices ----------- */
+    /* iPads ----------- */
     /* Desktops and laptops ----------- */
     /* Large screens ----------- */ }
     @media only screen and (min-width: 768px) {
-      /* line 62, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+      /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
       .wrap header > div,
       .wrap main > div,
       .wrap footer > div {
         max-width: 768px; } }
     @media only screen and (min-width: 1224px) {
-      /* line 62, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+      /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
       .wrap header > div,
       .wrap main > div,
       .wrap footer > div {
         max-width: 1000px; } }
     @media only screen and (min-width: 1824px) {
-      /* line 62, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+      /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
       .wrap header > div,
       .wrap main > div,
       .wrap footer > div {
         max-width: 100px; } }
-  /* line 89, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  .wrap header > div {
-    text-align: left; }
-    /* line 93, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-    .wrap header > div > div {
-      width: 50%; }
-  /* line 101, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  /* line 90, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
   .wrap main {
     flex-grow: 1;
     background-color: transparent; }
 
-/* line 113, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 99, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 body {
   color: #777;
   background-color: #fff; }
 
-/* line 118, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 104, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 header {
   color: #fff;
   background-color: #d32123; }
 
-/* line 123, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 109, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 footer {
   color: #fff;
   background-color: #4f0c0d; }
-  /* line 127, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  /* line 113, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
   footer h2,
   footer h3 {
     color: inherit; }
 
-/* line 144, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-header > div div:nth-child(1) h1 {
-  line-height: 0; }
+/* line 123, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+header {
+  padding: 0px 0px;
+  display: flex; }
+  /* line 127, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  header > div {
+    padding: 0px 0px !important; }
+    /* line 132, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    header > div:nth-child(1) h1 {
+      line-height: 0; }
 
-/* line 150, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-header > div div:nth-child(2) {
-  text-align: right; }
+/* line 149, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+header nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #651011;
+  /* iPads  ----------- */ }
+  @media only screen and (min-width: 768px) {
+    /* line 149, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    header nav {
+      flex-direction: row;
+      background-color: transparent; } }
+  /* line 160, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  header nav a {
+    padding: 10px 10px;
+    flex: 1;
+    color: #fff;
+    text-decoration: none; }
+    /* line 166, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    header nav a:hover {
+      color: #ec8788; }
 
-/* line 169, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-main .col-2 > div {
+/* line 193, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+.col-2 > div {
   width: 50%; }
 
-/* line 177, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-main .col-3 > div {
+/* line 201, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+.col-3 > div {
   width: 33.333%; }
 
-/* line 195, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-.row > div, .wrap header > div > div, main .col > div {
+/* line 208, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+.col-4 > div {
+  width: 25%; }
+
+/* line 219, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+.row > div, .col > div {
   padding: 0 10px;
   float: left;
-  /* Medium Devices ----------- */ }
+  /* Phone  ----------- */ }
   @media only screen and (max-width: 768px) {
-    /* line 195, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-    .row > div, .wrap header > div > div, main .col > div {
+    /* line 219, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    .row > div, .col > div {
       width: 100%; } }
-  /* line 204, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  .row > div:first-child, .wrap header > div > div:first-child, main .col > div:first-child {
-    padding-left: 0px; }
-  /* line 208, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  .row > div:last-child, .wrap header > div > div:last-child, main .col > div:last-child {
-    padding-right: 0px; }
 
-/* line 216, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-.clearfix::after, header > div::after, .row::after, .wrap header > div::after, main .col::after {
+/* line 240, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+.clearfix::after, .row::after, .col::after {
   content: "";
   clear: both;
   display: table; }
 
-/* Smartphones (portrait) ----------- */
+/* Smartphones  ----------- */
 @media only screen and (max-width: 320px) {
   /* Styles */ }
 
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+/* iPads  ----------- */
+@media only screen and (min-width: 768px) {
   /* Styles */ }
 
 /* Desktops and laptops ----------- */

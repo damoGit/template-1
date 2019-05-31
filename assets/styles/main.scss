@@ -1,7 +1,10 @@
 @import "normalize";
 @import "variables";
 
+// 1. Box Sizing
+// ===================================
 /* apply a natural box layout model to all elements, but allowing components to change */
+
 html {
     box-sizing: border-box;
 }
@@ -12,7 +15,7 @@ html {
     box-sizing: inherit;
 }
 
-// 1. Typography
+// 2. Typography
 // ===================================
 
 body {
@@ -37,17 +40,17 @@ main {
         color: darken($primaryColor, 100%);
     }
 
-    hr {
-        max-width: 300px;
-        border: solid 1px $primaryColor;
-        border-left: none;
-        border-right: none;
-        border-bottom: none;
-    }
-
 }
 
-// 2. Layout
+hr {
+    width: 50%;
+    border: solid 1px $primaryColor;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+// 3. Layout
 // ===================================
 
 .wrap {
@@ -65,7 +68,7 @@ main {
             padding: 20px;
             text-align: center;
 
-            /* Medium Devices ----------- */
+            /* iPads ----------- */
             @media only screen and (min-width : 768px) {
                 max-width: 768px;
             }
@@ -84,30 +87,13 @@ main {
 
     }
 
-    header {
-
-        > div {
-            @extend .row;
-            text-align: left;
-
-            > div {
-                width: 50%;
-            }
-
-        }
-
-    }
-
     main {
         flex-grow: 1;
         background-color: $mainBG;
     }
-
-    footer {}
-
 }
 
-// 3. Colour Pallete
+// 4. Colour Pallete
 // ===================================
 
 body {
@@ -131,15 +117,17 @@ footer {
 
 }
 
-// 4. Header
+// 5. Header
 // ===================================
 
 header {
-
+    padding: 0px 0px;
+    display: flex;
+    
     > div {
-        @extend .clearfix;
-
-        div:nth-child(1) {
+        padding: 0px 0px!important;
+        
+        &:nth-child(1) {
 
             h1 {
                 line-height: 0;
@@ -147,46 +135,82 @@ header {
 
         }
 
-        div:nth-child(2) {
-            text-align: right;
+        &:nth-child(2) {
+            
         }
 
     }
 
 }
 
-// 4. Main
+// 5.1 Header Navigation
 // ===================================
 
-main {
+header nav {
+    display: flex;
+    flex-direction: column;
+    background-color: darken($primaryColor,25%);
     
-    .col{
-        @extend .row;
+    /* iPads  ----------- */
+    @media only screen and (min-width : 768px) {
+        flex-direction: row;
+        background-color: transparent;
     }
     
-    .col-2{
+    a{
+        padding: 10px 10px;
+        flex: 1;
+        color: #fff;
+        text-decoration: none;
         
-        >div{
-            width: 50%;
+        &:hover{
+            color: lighten($primaryColor,25%);
         }
         
     }
     
-    .col-3{
-      
-        >div{
-            width: 33.333%;
-        }  
-    }
-    
 }
 
-// 4. Footer
+// 6. Main
+// ===================================
+
+main {}
+
+// 7. Footer
 // ===================================
 
 footer {}
 
-// 5. Helpers 
+// 8. Grid
+// ===================================
+
+.col {
+    @extend .row;
+}
+
+.col-2 {
+
+    > div {
+        width: 50%;
+    }
+
+}
+
+.col-3 {
+
+    > div {
+        width: 33.333%;
+    }
+}
+
+.col-4 {
+
+    > div {
+        width: 25%;
+    }
+}
+
+//9. Helpers 
 // ===================================
 
 .row {
@@ -195,20 +219,20 @@ footer {}
     > div {
         padding: 0 10px;
         float: left;
-        
-        /* Medium Devices ----------- */
+
+        /* Phone  ----------- */
         @media only screen and (max-width : 768px) {
             width: 100%;
         }
-        
-        &:first-child{
-            padding-left: 0px;
+
+        &:first-child {
+            //padding-left: 0px;
         }
-        
-        &:last-child{
-            padding-right: 0px;
+
+        &:last-child {
+            //padding-right: 0px;
         }
-        
+
     }
 
 }
@@ -219,25 +243,25 @@ footer {}
     display: table;
 }
 
-// Media Quaries
+// 10. Media Quaries
 // ===================================
 
-/* Smartphones (portrait) ----------- */
+/* Smartphones  ----------- */
 @media only screen and (max-width : 320px) {
     /* Styles */
 }
 
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    /* Styles */
-}
+    /* iPads  ----------- */
+    @media only screen and (min-width : 768px) {
+        /* Styles */
+    }
 
-/* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
-    /* Styles */
-}
+    /* Desktops and laptops ----------- */
+    @media only screen and (min-width : 1224px) {
+        /* Styles */
+    }
 
-/* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
-    /* Styles */
-}
+    /* Large screens ----------- */
+    @media only screen and (min-width : 1824px) {
+        /* Styles */
+    }
