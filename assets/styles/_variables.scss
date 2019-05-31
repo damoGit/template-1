@@ -1,4 +1,8 @@
-$bodyBG:            #ffffff;
-$headerBG:          #d32123;
+$primaryColor:      #d32123;
+
+$bodyBG:            #fff;
+$headerBG:          $primaryColor;
 $mainBG:            transparent;
-$footerBG:          #333333;
+$footerBG:          darken($primaryColor,30%);
+
+$bodyColor:         #777;

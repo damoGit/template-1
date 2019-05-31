@@ -1,63 +1,222 @@
 @import "normalize";
 @import "variables";
 
-// Typography
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+// 1. Typography
 // ===================================
 
-h1,h2,h3{
+body {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
-// Layout
-// ===================================
+main {
 
-body{
-    background-color: $bodyBG;
+    h1,
+    h2,
+    h3 {
+        color: darken($primaryColor, 100%);
+    }
+
+    hr {
+        max-width: 300px;
+        border: solid 1px $primaryColor;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
 }
 
-.wrap{
+// 2. Layout
+// ===================================
+
+.wrap {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    
+
     header,
     main,
-    footer{
-        
-        >div{
+    footer {
+
+        > div {
             width: 100%;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
 
+            /* Medium Devices ----------- */
+            @media only screen and (min-width : 768px) {
+                max-width: 768px;
+            }
+
             /* Desktops and laptops ----------- */
-            @media only screen  and (min-width : 1224px) {
-                max-width: 1224px;
+            @media only screen and (min-width : 1224px) {
+                max-width: 1000px;
             }
 
             /* Large screens ----------- */
-            @media only screen  and (min-width : 1824px) {
-                max-width: 1824px;
-            }  
-            
+            @media only screen and (min-width : 1824px) {
+                max-width: 100px;
+            }
+
+        }
+
+    }
+
+    header {
+
+        > div {
+            @extend .row;
+            text-align: left;
+
+            > div {
+                width: 50%;
+            }
+
+        }
+
+    }
+
+    main {
+        flex-grow: 1;
+        background-color: $mainBG;
+    }
+
+    footer {}
+
+}
+
+// 3. Colour Pallete
+// ===================================
+
+body {
+    color: $bodyColor;
+    background-color: $bodyBG;
+}
+
+header {
+    color: #fff;
+    background-color: $headerBG;
+}
+
+footer {
+    color: #fff;
+    background-color: $footerBG;
+
+    h2,
+    h3 {
+        color: inherit;
+    }
+
+}
+
+// 4. Header
+// ===================================
+
+header {
+
+    > div {
+        @extend .clearfix;
+
+        div:nth-child(1) {
+
+            h1 {
+                line-height: 0;
+            }
+
+        }
+
+        div:nth-child(2) {
+            text-align: right;
+        }
+
+    }
+
+}
+
+// 4. Main
+// ===================================
+
+main {
+    
+    .col{
+        @extend .row;
+    }
+    
+    .col-2{
+        
+        >div{
+            width: 50%;
         }
         
     }
     
-    header{
-       background-color: $headerBG; 
+    .col-3{
+      
+        >div{
+            width: 33.333%;
+        }  
     }
     
-    main{
-        flex-grow: 1;
-        background-color: $mainBG; 
+}
+
+// 4. Footer
+// ===================================
+
+footer {}
+
+// 5. Helpers 
+// ===================================
+
+.row {
+    @extend .clearfix;
+
+    > div {
+        padding: 0 10px;
+        float: left;
+        
+        /* Medium Devices ----------- */
+        @media only screen and (max-width : 768px) {
+            width: 100%;
+        }
+        
+        &:first-child{
+            padding-left: 0px;
+        }
+        
+        &:last-child{
+            padding-right: 0px;
+        }
+        
     }
-    
-    footer{
-        background-color: $footerBG; 
-    }
-    
-    
+
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 // Media Quaries
@@ -65,20 +224,20 @@ body{
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-/* Styles */
+    /* Styles */
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
+    /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
 }
 
 /* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
 }
