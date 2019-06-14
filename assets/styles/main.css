@@ -377,14 +377,14 @@ hr {
   border-bottom: none; }
 
 /* line 56, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-.wrap {
+body > div {
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
   /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  .wrap header > div,
-  .wrap main > div,
-  .wrap footer > div {
+  body > div header > div,
+  body > div main > div,
+  body > div footer > div {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -394,24 +394,24 @@ hr {
     /* Large screens ----------- */ }
     @media only screen and (min-width: 768px) {
       /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-      .wrap header > div,
-      .wrap main > div,
-      .wrap footer > div {
+      body > div header > div,
+      body > div main > div,
+      body > div footer > div {
         max-width: 768px; } }
     @media only screen and (min-width: 1224px) {
       /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-      .wrap header > div,
-      .wrap main > div,
-      .wrap footer > div {
+      body > div header > div,
+      body > div main > div,
+      body > div footer > div {
         max-width: 1000px; } }
     @media only screen and (min-width: 1824px) {
       /* line 65, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-      .wrap header > div,
-      .wrap main > div,
-      .wrap footer > div {
+      body > div header > div,
+      body > div main > div,
+      body > div footer > div {
         max-width: 100px; } }
   /* line 90, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  .wrap main {
+  body > div main {
     flex-grow: 1;
     background-color: transparent; }
 
@@ -421,78 +421,167 @@ body {
   background-color: #fff; }
 
 /* line 104, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-header {
+body > div header {
   color: #fff;
   background-color: #d32123; }
 
 /* line 109, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-footer {
+body > div footer {
   color: #fff;
-  background-color: #4f0c0d; }
+  background-color: #333; }
   /* line 113, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  footer h2,
-  footer h3 {
+  body > div footer h2,
+  body > div footer h3 {
     color: inherit; }
+  /* line 118, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div footer hr {
+    border-color: #666; }
 
-/* line 123, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-header {
-  padding: 0px 0px;
-  display: flex; }
-  /* line 127, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  header > div {
-    padding: 0px 0px !important; }
-    /* line 132, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-    header > div:nth-child(1) h1 {
-      line-height: 0; }
+/* line 127, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+body > div header {
+  padding: 0px 0px; }
+  /* line 130, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header > div {
+    padding: 0px 0px; }
+    @media only screen and (min-width: 768px) {
+      /* line 130, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+      body > div header > div {
+        display: flex;
+        flex-direction: row; } }
+    /* line 138, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    body > div header > div > div:nth-child(1) {
+      padding: 10px 20px;
+      text-align: left; }
+      @media only screen and (min-width: 768px) {
+        /* line 138, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+        body > div header > div > div:nth-child(1) {
+          width: 200px;
+          padding: 10px 20px; } }
+      /* line 147, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+      body > div header > div > div:nth-child(1) h1 {
+        line-height: 0; }
+    @media only screen and (min-width: 768px) {
+      /* line 153, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+      body > div header > div > div:nth-child(2) {
+        flex: 1; } }
 
-/* line 149, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-header nav {
-  display: flex;
-  flex-direction: column;
-  background-color: #651011;
+/* line 170, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+body > div header div div:nth-child(2) > div {
+  width: 40px;
+  height: 25px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: block;
   /* iPads  ----------- */ }
   @media only screen and (min-width: 768px) {
-    /* line 149, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-    header nav {
+    /* line 170, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    body > div header div div:nth-child(2) > div {
+      display: none; } }
+  /* line 186, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out; }
+  /* line 199, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div span:nth-child(1) {
+    top: 0px;
+    transform-origin: left center; }
+  /* line 204, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div span:nth-child(2) {
+    top: 10px;
+    transform-origin: left center; }
+  /* line 209, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div span:nth-child(3) {
+    top: 20px;
+    transform-origin: left center; }
+  /* line 214, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: -3px;
+    left: 6px; }
+  /* line 220, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0; }
+  /* line 225, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header div div:nth-child(2) > div.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 25px;
+    left: 6px; }
+
+/* line 234, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+body > div header nav {
+  height: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #a71a1c;
+  /* iPads  ----------- */ }
+  @media only screen and (min-width: 768px) {
+    /* line 234, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    body > div header nav {
+      height: 100%;
       flex-direction: row;
       background-color: transparent; } }
-  /* line 160, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-  header nav a {
+  /* line 247, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header nav.show {
+    height: 100%; }
+  /* line 251, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+  body > div header nav a {
     padding: 10px 10px;
     flex: 1;
+    align-self: center;
     color: #fff;
     text-decoration: none; }
-    /* line 166, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
-    header nav a:hover {
+    /* line 258, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    body > div header nav a:hover {
       color: #ec8788; }
 
-/* line 193, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 276, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+body > div footer {
+  border-top: solid 5px #d32123; }
+
+/* line 289, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 .col-2 > div {
   width: 50%; }
 
-/* line 201, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 297, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 .col-3 > div {
   width: 33.333%; }
 
-/* line 208, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 304, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 .col-4 > div {
   width: 25%; }
 
-/* line 219, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 315, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 .row > div, .col > div {
   padding: 0 10px;
   float: left;
   /* Phone  ----------- */ }
   @media only screen and (max-width: 768px) {
-    /* line 219, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+    /* line 315, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
     .row > div, .col > div {
       width: 100%; } }
 
-/* line 240, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+/* line 336, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
 .clearfix::after, .row::after, .col::after {
   content: "";
   clear: both;
   display: table; }
+
+/* line 342, /Users/damiensakora/Desktop/sandpit/template1/assets/styles/main.scss */
+.full-page {
+  height: 100vh; }
 
 /* Smartphones  ----------- */
 @media only screen and (max-width: 320px) {
