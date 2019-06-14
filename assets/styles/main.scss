@@ -1,5 +1,7 @@
 @import "normalize";
 @import "variables";
+@import "libs/fontawesome/scss/fontawesome.scss";
+@import "libs/fontawesome/scss/solid.scss";
 
 // 1. Box Sizing
 // ===================================
@@ -91,6 +93,7 @@ body > div {
         flex-grow: 1;
         background-color: $mainBG;
     }
+
 }
 
 // 4. Colour Pallete
@@ -271,14 +274,46 @@ body > div header {
 
 body > div main {}
 
-// 7. Footer
+// 7. Sell
+// ===================================
+
+body > div .sell{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: url('../images/bg-city.jpg') 50% 50% fixed / cover;
+    
+    > div{
+        min-height: 100vh;
+        padding: 15px 15px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        background-color:rgba(0, 0, 0, 0.5);
+        
+        > div{
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        h1,h2,h3{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        
+    }
+    
+}
+
+// 8. Footer
 // ===================================
 
 body > div footer {
     border-top: solid 5px $primaryColor;
 }
 
-// 8. Grid
+// 9. Grid
 // ===================================
 
 .col {
@@ -307,7 +342,7 @@ body > div footer {
     }
 }
 
-//9. Helpers 
+//10. Helpers 
 // ===================================
 
 .row {
@@ -344,7 +379,7 @@ body > div footer {
     height: 100vh;
 }
 
-// 10. Media Quaries
+// 11. Media Quaries
 // ===================================
 
 /* Smartphones  ----------- */
