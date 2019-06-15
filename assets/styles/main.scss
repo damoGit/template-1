@@ -107,6 +107,7 @@ body {
 body > div header {
     color: #fff;
     background-color: $headerBG;
+    //background-color: rgba(0,0,0,0.5);
 }
 
 body > div footer {
@@ -128,7 +129,11 @@ body > div footer {
 // ===================================
 
 body > div header {
+    width: 100%;
     padding: 0px 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 
     > div {
         padding: 0px 0px;
@@ -214,18 +219,18 @@ body > div header {
             transform-origin: left center;
         }
 
-        &.open span:nth-child(1) {
+        &.animate span:nth-child(1) {
             transform: rotate(45deg);
             top: -3px;
             left: 6px;
         }
 
-        &.open span:nth-child(2) {
+        &.animate span:nth-child(2) {
             width: 0%;
             opacity: 0;
         }
 
-        &.open span:nth-child(3) {
+        &.animate span:nth-child(3) {
             transform: rotate(-45deg);
             top: 25px;
             left: 6px;
@@ -238,6 +243,7 @@ body > div header {
         height: 0;
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         background-color: darken($primaryColor, 10%);
 
         /* iPads  ----------- */
@@ -247,8 +253,8 @@ body > div header {
             flex-direction: row;
             background-color: transparent;
         }
-        
-        &.show{
+
+        &.show {
             height: 100%;
         }
 
@@ -277,33 +283,35 @@ body > div main {}
 // 7. Sell
 // ===================================
 
-body > div .sell{
+body > div .sell {
     width: 100%;
     color: #fff;
     text-align: center;
     background: url('../images/bg-city.jpg') 50% 50% fixed / cover;
-    
-    > div{
+
+    > div {
         min-height: 100vh;
         padding: 15px 15px;
         display: flex;
         justify-content: center;
         align-self: center;
         flex-direction: column;
-        background-color:rgba(0, 0, 0, 0.5);
-        
-        > div{
+        background-color: rgba(0, 0, 0, 0.5);
+
+        > div {
             max-width: 600px;
             margin: 0 auto;
         }
-        
-        h1,h2,h3{
+
+        h1,
+        h2,
+        h3 {
             font-size: 50px;
             font-weight: bold;
         }
-        
+
     }
-    
+
 }
 
 // 8. Footer
