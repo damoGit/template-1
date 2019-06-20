@@ -106,8 +106,12 @@ body {
 
 body > div header {
     color: #fff;
-    background-color: $headerBG;
-    //background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
+    
+    &.red{
+        background-color: $headerBG;
+    }
+    
 }
 
 body > div footer {
@@ -146,9 +150,10 @@ body > div header {
         & > div:nth-child(1) {
             padding: 10px 20px;
             text-align: left;
+            font-size: 25px;
 
             @media only screen and (min-width : 768px) {
-                width: 200px;
+                width: 300px;
                 padding: 10px 20px;
             }
 
@@ -244,6 +249,7 @@ body > div header {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        text-align: left;
         background-color: darken($primaryColor, 10%);
 
         /* iPads  ----------- */
@@ -251,6 +257,7 @@ body > div header {
             height: 100%;
             max-height: 600px;
             flex-direction: row;
+            text-align: center;
             background-color: transparent;
         }
 
@@ -261,9 +268,15 @@ body > div header {
         a {
             padding: 10px 10px;
             flex: 1;
-            align-self: center;
+            //align-self: center;
+            //align-content: center;
             color: #fff;
             text-decoration: none;
+
+            /* iPads  ----------- */
+            @media only screen and (min-width : 768px) {
+                align-self: center;
+            }
 
             &:hover {
                 color: lighten($primaryColor, 25%);
